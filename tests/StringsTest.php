@@ -88,7 +88,10 @@ class StringsTest extends TestCase
 
         // strncasecmp — Binary safe case-insensitive string comparison of the first n characters
         // TODO to be implemented
-        $this->assertEquals('to be implemented', ucfirst('TO bE Implemented'));
+        $str1 ='Implement';
+        $str2 = 'Implemented';
+        $this->assertEquals(0,strncasecmp($str1, $str2, 4));
+
 
         // str_replace — Replace all occurrences of the search string with the replacement string
         // TODO to be implemented
@@ -100,10 +103,11 @@ class StringsTest extends TestCase
 
         // strstr — Find the first occurrence of a string
         // TODO to be implemented
-        $this->assertEquals('/manual/ru/function.strstr.php', substr("https://www.php.net/manual/ru/function.strstr.php", 'manual'));
+        $this->assertEquals('manual/ru/function.strstr.php', strstr("https://www.php.net/manual/ru/function.strstr.php", 'manual'));
+        
         // strrchr — Find the last occurrence of a character in a string
         // TODO to be implemented
-        $this->assertEquals('/function.strrchr.php', substr("https://www.php.net/manual/ru/function.strrchr.php", '/'));
+        $this->assertEquals('/function.strrchr.php', strrchr("https://www.php.net/manual/ru/function.strrchr.php", '/'));
 
         // substr — Return part of a string
         // TODO to be implemented
